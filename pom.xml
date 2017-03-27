@@ -59,6 +59,7 @@
                 </goals>
                 <phase>package</phase>
                 <configuration>
+                    <finalName>bankapp</finalName>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
