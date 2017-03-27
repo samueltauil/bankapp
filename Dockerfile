@@ -9,10 +9,10 @@ WORKDIR /code
 ADD pom.xml /code/pom.xml
 #RUN ["mvn", "dependency:resolve"]
 #RUN ["mvn", "verify"]
-ENV MAVEN_CONFIG=/srv/.m2
-RUN adduser --home /srv --disabled-password --disabled-login --uid 1984 bankapp && \
-    mkdir /srv/.m2 && \
-    chown -R bankapp /srv
+ENV MAVEN_CONFIG=/home/bankapp/.m2
+RUN adduser --home /home/bankapp --disabled-password --disabled-login --uid 1984 bankapp && \
+    mkdir /home/bankapp/.m2 && \
+    chown -R bankapp /home/bankapp
 
 USER bankapp    
     
