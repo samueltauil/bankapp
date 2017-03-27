@@ -19,7 +19,7 @@ ADD pom.xml /code/pom.xml
 # ADD src /code/src
 RUN ["mvn", "package"]
 
-CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "target/bankapp-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "/code/target/bankapp-1.0-SNAPSHOT-jar-with-dependencies.jar"]
 
 #FROM maven:3.3-jdk-8-onbuild
 #CMD ["java","-jar","/usr/src/app/target/bankapp-1.0-SNAPSHOT-jar-with-dependencies.jar"]
