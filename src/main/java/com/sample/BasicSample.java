@@ -13,7 +13,7 @@ public class BasicSample {
         Class.forName("org.postgresql.Driver");
 
         // Connect to the "bank" database.
-        Connection db = DriverManager.getConnection("jdbc:postgresql://root@cockroachdb-0.cockroachdb.myproject.svc.cluster.local:26257?bank?sslmode=disable", "root", "");
+        Connection db = DriverManager.getConnection("jdbc:postgresql://cockroachdb-0.cockroachdb.myproject.svc.cluster.local:26257?bank?sslmode=disable", "root", "");
 
         try {
             // Create the "accounts" table.
