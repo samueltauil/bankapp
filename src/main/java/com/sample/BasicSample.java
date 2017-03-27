@@ -22,7 +22,7 @@ public class BasicSample {
             db.createStatement().execute("CREATE TABLE accounts (id serial PRIMARY KEY, balance INT)");
 
             // Insert two rows into the "accounts" table.
-            db.createStatement().execute("INSERT INTO accounts (id,balance) VALUES (1,1000)");
+            db.createStatement().execute("INSERT INTO accounts (id,balance) VALUES (1,1000), (2,250), (3,400), (4,1800)");
 
             // Print out the balances.
             System.out.println("Initial balances:");
