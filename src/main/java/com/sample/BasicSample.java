@@ -20,7 +20,7 @@ public class BasicSample {
             db.createStatement().execute("CREATE TABLE IF NOT EXISTS accounts (id INT PRIMARY KEY, balance INT)");
 
             // Insert two rows into the "accounts" table.
-            db.createStatement().execute("INSERT INTO accounts (id, balance) VALUES (100, 1000), (101, 250)");
+            db.createStatement().execute("INSERT INTO accounts (id, balance) VALUES (null, 1000), (null, 250)");
 
             // Print out the balances.
             System.out.println("Initial balances:");
