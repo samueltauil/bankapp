@@ -16,7 +16,7 @@ ADD pom.xml /code/pom.xml
 
 # USER bankapp    
     
-# ADD src /code/src
+ADD src /code/src
 RUN ["mvn", "package"]
 
 CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "/code/target/bankapp-1.0-SNAPSHOT-jar-with-dependencies.jar"]
