@@ -17,7 +17,7 @@ RUN adduser --home /home/bankapp --disabled-password --disabled-login --uid 1984
 USER bankapp    
     
 ADD src /code/src
-RUN ["mvn", "package"]
+#RUN ["mvn", "package"]
 
 CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "target/bankapp-1.0-SNAPSHOT-jar-with-dependencies.jar"]
 
