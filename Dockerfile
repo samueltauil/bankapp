@@ -6,7 +6,7 @@ FROM java:8
 # RUN unset M2_HOME
 # WORKDIR /code
 # Prepare by downloading dependencies
-# ADD pom.xml /code/pom.xml
+ADD pom.xml /code/pom.xml
 #RUN ["mvn", "dependency:resolve"]
 #RUN ["mvn", "verify"]
 # ENV MAVEN_CONFIG=/home/bankapp/.m2
@@ -17,7 +17,7 @@ FROM java:8
 # USER bankapp    
     
 # ADD src /code/src
-#RUN ["mvn", "package"]
+RUN ["mvn", "package"]
 
 CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "target/bankapp-1.0-SNAPSHOT-jar-with-dependencies.jar"]
 
