@@ -16,8 +16,10 @@ public class BasicSample {
         Connection db = DriverManager.getConnection("jdbc:postgresql://cockroachdb-0.cockroachdb.myproject.svc.cluster.local:26257/bank?sslmode=disable", "root", "");
 
         try {
+          
+            db.createStatement().execute("DROP table accounts");         
             // Create the "accounts" table.
-            db.createStatement().execute("CREATE TABLE IF NOT EXISTS accounts (id serial PRIMARY KEY, balance INT)");
+            db.createStatement().execute("CREATE TABLE accounts (id serial PRIMARY KEY, balance INT)");
 
             // Insert two rows into the "accounts" table.
             db.createStatement().execute("INSERT INTO accounts (id,balance) VALUES (1,1000)");
