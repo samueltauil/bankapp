@@ -8,7 +8,7 @@ WORKDIR /code
 # Prepare by downloading dependencies
 ADD pom.xml /code/pom.xml
 #RUN ["mvn", "dependency:resolve"]
-RUN ["mvn", "verify"]
+#RUN ["mvn", "verify"]
 
 ADD src /code/src
 RUN ["mvn", "package"]
